@@ -131,6 +131,7 @@ if __name__ == "__main__":
         interrupts = result.get("__interrupt__", [])
 
         if interrupts:
+            # checking if that tool with HITL got triggered
             # Our interrupt payload is the string we passed to interrupt(...)
             prompt_to_human = interrupts[0].value
             print(f"HITL: {prompt_to_human}")
